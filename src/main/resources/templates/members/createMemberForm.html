@@ -1,11 +1,15 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/header :: header" /> <style>
-.fieldError {
-border-color: #bd2130; }
-</style> <body>
+<head th:replace="fragments/header :: header" />
+<style>
+  .fieldError {
+    border-color: #bd2130;
+  }
+</style>
+<body>
 <div class="container">
   <div th:replace="fragments/bodyHeader :: bodyHeader"/>
+
   <form role="form" action="/members/new" th:object="${memberForm}" method="post">
     <div class="form-group">
       <label th:for="name">이름</label>
